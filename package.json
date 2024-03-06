@@ -1,0 +1,43 @@
+{
+  "name": "leetcode-stat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "typecheck": "tsc --noEmit",
+    "build": "swc src --out-dir dist --strip-leading-paths",
+    "start:dev": "npm run build && node dist/index.js",
+    "dev": "nodemon",
+    "lint": "npx @biomejs/biome check ./src",
+    "check": "npm run typecheck && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ampa1R/leetcode-stat.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ampa1R/leetcode-stat/issues"
+  },
+  "homepage": "https://github.com/Ampa1R/leetcode-stat#readme",
+  "dependencies": {
+    "@biomejs/biome": "1.5.3",
+    "@swc/cli": "0.3.10",
+    "@swc/core": "1.4.5",
+    "typescript": "5.4.2"
+  },
+  "devDependencies": {
+    "@swc/helpers": "^0.5.6",
+    "@swc/jest": "^0.2.36",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.25",
+    "chokidar": "^3.6.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2"
+  }
+}
